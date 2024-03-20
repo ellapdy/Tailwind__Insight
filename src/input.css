@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner{
+    @apply bg-hBanner h-[600px] bg-cover bg-no-repeat lg:h-[600px];
+}
+.container{
+    @apply max-w-[90rem] p-6 w-full mx-auto;
+}
+@layer components{
+    .burger__menu{
+        @apply lg:hidden;
+    }
+    .burger__menu span{
+        @apply bg-light block rounded-full transition-all;
+    }
+    .burger__menu span:first-child{
+        @apply w-[1.8rem] h-[.2rem] mb-1;
+    }
+    .burger__menu span:nth-child(2) {
+        @apply w-[1.7rem] h-[.2rem] translate-x-[.1rem] mb-1;
+    }
+    .burger__menu span:nth-child(3) {
+        @apply w-[1.6rem] h-[.2rem] translate-x-[.2rem] mb-1;
+    }
+    .burger__menu.open span:first-child{
+        @apply transform translate-y-[10px] rotate-[-225deg] transition-all;
+    }
+    .burger__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all;
+    }
+    .burger__menu.open span:last-child{
+        @apply transform translate-y-[-5px] rotate-[225deg] transition-all;
+    }
+
+    .header .header__action{
+        @apply bg-dark top-[6.2rem] h-[90vh] px-4 pt-0 overflow-hidden hidden;
+    }
+    /* .header .branding{
+        @apply hidden;
+    } */
+    .branding{
+        @apply flex justify-between mx-6 py-4 lg:flex;
+    }
+    .header__navd{
+        @apply hidden lg:block lg:flex lg:flex-row lg:gap-4 lg:text-light;
+    }
+    .main__bottom{
+        @apply mx-2 text-light text-center;
+    }
+    .main__bottom h1{
+        @apply text-[3rem] max-w-md text-center pb-10 lg:justify-center;
+    }
+    .main__btn{
+        @apply flex flex-col gap-4 lg:flex lg:flex-row lg:justify-center;
+    }
+    .main__bottom .main__btn{
+        @apply py-4;
+    }
+
+    /* Services */
+    .services__cards{
+        @apply md:grid md:grid-cols-1
+        lg:grid lg:grid-cols-3;
+    }
+    .services__top{
+        @apply text-center
+        lg:text-left justify-start;
+    }
+    .services__top h3{
+        @apply pb-2;
+    }
+    .services__cards .services__card{
+        @apply mb-6 shadow-lg max-w-md mx-8;
+    }
+    .services__cards .services__card h3{
+        @apply text-center font-bold text-[1.5rem] p-6;
+    }
+    .services__cards .services__card p{
+        @apply text-justify p-4;
+    }
+    .services__cards .services__card .card__text{
+        @apply mx-4 mb-6;
+    }
+    .services__card .card__btn{
+        @apply text-center text-lred border-t border-t-lred py-4
+    }
+
+    /* Projects */
+    .projects__wrapper{
+        @apply md:grid md:grid-cols-1 lg:flex;
+    }
+    .projects__wrapper img{
+        @apply w-[800px];
+    }
+    .projects__item{
+        @apply mb-12 relative;
+    }
+    .projects__content{
+        @apply bg-black opacity-70 max-w-xl mx-6 h-[300px] text-light px-8
+        absolute translate-y-[-31rem];
+    }
+    .projects__content h3{
+        @apply text-[2rem] text-center p-6;
+    }
+    .projects__content p{
+        @apply justify-center;
+    }
+    .projects__content .projects__btn{
+        @apply text-center p-6;
+    }
+
+    /* Contacts */
+    .contacts__top{
+        @apply text-center lg:text-left justify-start mb-12;
+    }
+    .contacts__top h3{
+        @apply pb-2;
+    }
+    .contacts__right ul{
+        @apply flex gap-5 mb-10
+    }
+
+    /* Footer */
+    .footer__wrapper{
+        @apply flex flex-col gap-6 items-center lg:grid lg:grid-cols-3 lg:justify-center;
+    }
+    .footer__social{
+        @apply flex gap-8 text-light md:order-first;
+    }
+    .footer__text{
+        @apply text-light md:order-last;
+    }
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block py-[.5rem] px-[1rem] rounded-full border-transparent border-[1px] 
+        text-sm font-medium hover:scale-[1.1];
+    }
+    .btn.bg--lred{
+        @apply bg-lred text-light;
+    }
+    .btn.bg--transparent{
+        @apply bg-transparent border-light text-light border-[1px];
+    }
+}
+
+
