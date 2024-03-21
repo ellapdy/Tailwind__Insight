@@ -11,43 +11,47 @@
     
     <section class="banner">
         <header class="header">
-            <div class="header__wrapper">
-                <div class="branding">
-                    <div>
-                    <img src="../dist/img/logo.png" alt="">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="branding">
+                        <div>
+                        <img src="../dist/img/logo.png" alt="">
+                        </div>
+                        <ul class="header__navd">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">Contacts</a></li>
+                        </ul>
                     </div>
-                    <ul class="header__navd">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                    <div class="burger__menu">
+                    <div class="header__action">
+                        <ul class="header__navm">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">Contacts</a></li>
+                        </ul>
+                        <ul class="header__social">
+                            <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        </ul>
+                        <div class="img">
+                        <img src="../dist/img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="burgir__menu">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                </div>
-                <div class="header__action">
-                    <ul class="header__navm">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                    <ul class="header__social">
-                        <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                    </ul>
-                    <img src="../dist/img/logo.png" alt="">
                 </div>
             </div>
         </header>
         <div class="container">
             <div class="banner__wrapper">
                 <div class="main__bottom">
-                    <h1>Turning Your House Into A Home</h1>
+                    <h1>Turning Your House <br> Into A Home</h1>
                     <ul class="main__btn">
                         <a href="" class="btn bg--transparent">See Projects</a>
                         <a href="" class="btn bg--lred">Inquire</a>
@@ -168,38 +172,42 @@
                         <h3 class="text-lred text-3xl font-bold">Contacts</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, libero.</p>
                     </div>
-                    <div class="contacts__right">
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-map-pin"></i></a></li>
-                            <p>Baloc Road, Brgy. San Ignacio, San Pablo City, Laguna</p>
-                        </ul>
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-phone"></i></a></li>
-                            <p>+639-123456789</p>
-                        </ul>
-                        <ul>
-                            <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-                            <p>kamotecue@gmail.com</p>
-                        </ul>
-                    </div>
-                    <div class="contacts__left">
-                        <form action="">
-                            <div class="input-wrap">
-                                <input type="text" required>
-                                <label for="">Name</label>
+                    <div class="contacts__content">
+                        <div class="contacts__right">
+                            <ul>
+                                <li><a href=""><i class="fa-solid fa-map-pin"></i></a></li>
+                                <p>Baloc Road, Brgy. San Ignacio, San Pablo City, Laguna</p>
+                            </ul>
+                            <ul>
+                                <li><a href=""><i class="fa-solid fa-phone"></i></a></li>
+                                <p>+639-123456789</p>
+                            </ul>
+                            <ul>
+                                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                                <p>kamotecue@gmail.com</p>
+                            </ul>
+                        </div>
+                        <div class="contacts__left">
+                            <form action="">
+                                <div class="input-wrap">
+                                    <input type="text" required>
+                                    <label for="">Name</label>
+                                </div>
+            
+                                <div class="input-wrap">
+                                    <input type="text" required>
+                                    <label for="">Email</label>
+                                </div>
+            
+                                <div class="input-wrap">
+                                    <textarea name="" id="" cols="30" rows="10" required></textarea>
+                                    <label for="">Message</label>
+                                </div>
+                            </form>
+                            <div>
+                            <a href="" class="btn bg--lred">Send Message</a>
                             </div>
-        
-                            <div class="input-wrap">
-                                <input type="text" required>
-                                <label for="">Email</label>
-                            </div>
-        
-                            <div class="input-wrap">
-                                <textarea name="" id="" cols="30" rows="10" required></textarea>
-                                <label for="">Message</label>
-                            </div>
-                        </form>
-                        <a href="" class="btn bg--lred">Send Message</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,5 +232,6 @@
             </div>
         </footer>
 
+        <script src="./js/script.js"></script>
 </body>
 </html>

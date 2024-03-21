@@ -9,48 +9,82 @@
     @apply max-w-[90rem] p-6 w-full mx-auto;
 }
 @layer components{
-    .burger__menu{
-        @apply lg:hidden;
+    .burgir__menu{
+        @apply lg:hidden absolute translate-x-[25rem] translate-y-[-3rem];
     }
-    .burger__menu span{
+    .burgir__menu span{
         @apply bg-light block rounded-full transition-all;
     }
-    .burger__menu span:first-child{
+    .burgir__menu span:first-child{
         @apply w-[1.8rem] h-[.2rem] mb-1;
     }
-    .burger__menu span:nth-child(2) {
+    .burgir__menu span:nth-child(2) {
         @apply w-[1.7rem] h-[.2rem] translate-x-[.1rem] mb-1;
     }
-    .burger__menu span:nth-child(3) {
+    .burgir__menu span:nth-child(3) {
         @apply w-[1.6rem] h-[.2rem] translate-x-[.2rem] mb-1;
     }
-    .burger__menu.open span:first-child{
+    .burgir__menu.open span:first-child{
         @apply transform translate-y-[10px] rotate-[-225deg] transition-all;
     }
-    .burger__menu.open span:nth-child(2){
+    .burgir__menu.open span:nth-child(2){
         @apply opacity-0 transition-all;
     }
-    .burger__menu.open span:last-child{
-        @apply transform translate-y-[-5px] rotate-[225deg] transition-all;
+    .burgir__menu.open span:last-child{
+        @apply transform translate-y-[-4px] rotate-[225deg] transition-all;
     }
 
-    .header .header__action{
+    /* .header .header__action{
         @apply bg-dark top-[6.2rem] h-[90vh] px-4 pt-0 overflow-hidden hidden;
-    }
-    /* .header .branding{
-        @apply hidden;
     } */
+
+    .header__action{
+        @apply bg-dark bg-cover absolute top-[0rem] right-0 w-0 h-screen transition-all 
+        flex flex-col gap-4 justify-start text-center overflow-hidden;
+    }
+    .header__action.open{
+        @apply w-[100%] px-10 pt-10 transition-all lg:hidden;
+    }
+    .header__action .header__navm{
+        @apply text-light font-bold text-[1.5rem] md:flex md:flex-col p-10 lg:hidden;
+    }
+    .header__action .header__social{
+        @apply text-light text-[1.5rem] flex flex-row justify-center mb-10;
+    }
+    .header__navm li{
+        @apply py-4 hover:bg-light hover:text-lred;
+    }
+    .header__social li{
+        @apply px-10 py-2;
+    }
+    .header__social li:first-child{
+        @apply  hover:bg-light hover:text-edilaw;
+    }
+    .header__social li:nth-child(2){
+        @apply  hover:bg-light hover:text-tblue;
+    }
+    .header__social li:last-child{
+        @apply  hover:bg-light hover:text-fblue;
+    }
+    .header__action .img{
+        @apply py-14 self-center;
+    }
+    
+
     .branding{
-        @apply flex justify-between mx-6 py-4 lg:flex;
+        @apply md:flex items-center gap-[54rem];
     }
     .header__navd{
-        @apply hidden lg:block lg:flex lg:flex-row lg:gap-4 lg:text-light;
+        @apply hidden lg:flex lg:flex-row lg:gap-6 lg:text-light font-bold text-[1.2rem];
+    }
+    .header__navd li a{
+        @apply  hover:text-lred;
     }
     .main__bottom{
         @apply mx-2 text-light text-center;
     }
     .main__bottom h1{
-        @apply text-[3rem] max-w-md text-center pb-10 lg:justify-center;
+        @apply text-[3rem] text-center pb-10 lg:justify-center lg:text-[4rem];
     }
     .main__btn{
         @apply flex flex-col gap-4 lg:flex lg:flex-row lg:justify-center;
@@ -66,19 +100,22 @@
     }
     .services__top{
         @apply text-center
-        lg:text-left justify-start;
+        lg:text-start lg:translate-x-[2rem];
     }
     .services__top h3{
-        @apply pb-2;
+        @apply pb-2 lg:text-start;
     }
     .services__cards .services__card{
-        @apply mb-6 shadow-lg max-w-md mx-8;
+        @apply mb-6 shadow-lg max-w-md mx-8 leading-8 lg:hover:scale-[1.1] lg:ease-in-out;
     }
     .services__cards .services__card h3{
         @apply text-center font-bold text-[1.5rem] p-6;
     }
     .services__cards .services__card p{
         @apply text-justify p-4;
+    }
+    .services__card:hover .card__btn{
+        @apply bg-lred text-light;
     }
     .services__cards .services__card .card__text{
         @apply mx-4 mb-6;
@@ -99,7 +136,7 @@
     }
     .projects__content{
         @apply bg-black opacity-70 max-w-xl mx-6 h-[300px] text-light px-8
-        absolute translate-y-[-31rem];
+        absolute translate-y-[-31rem] leading-7;
     }
     .projects__content h3{
         @apply text-[2rem] text-center p-6;
@@ -112,6 +149,9 @@
     }
 
     /* Contacts */
+    .contacts__content{
+        @apply flex-row md:grid md:grid-cols-2 gap-[4rem];
+    }
     .contacts__top{
         @apply text-center lg:text-left justify-start mb-12;
     }
@@ -119,12 +159,36 @@
         @apply pb-2;
     }
     .contacts__right ul{
-        @apply flex gap-5 mb-10
+        @apply flex gap-5 mb-10;
+    }
+    .contacts__right ul li a{
+        @apply text-lred text-[1rem];
+    }
+    .contacts__left{
+        @apply shadow-lg p-[1.5rem] rounded-3xl md:order-1 bg-light lg:translate-y-12;
+    }
+    .contacts__right{
+        @apply md:order-2;
+    }
+    .contacts__left a{
+        @apply w-[10rem] block ml-[13.5rem] text-left text-lg md:ml-[28.5rem] lg:translate-x-[0rem];
+    }
+    .input-wrap{
+        @apply relative mb-[1rem];
+    }
+    .input-wrap input{
+        @apply bg-transparent w-full p-[1rem] relative border-[1px] rounded-3xl border-gray-500 text-dark focus:border-gray-700;
+    }
+    .input-wrap textarea{
+        @apply bg-transparent w-full p-[1rem] relative border-[1px] rounded-3xl border-gray-500 text-dark focus:border-gray-700 resize-none;
+    }
+    .input-wrap label{
+        @apply absolute transition-all left-0 ml-[1rem];
     }
 
     /* Footer */
     .footer__wrapper{
-        @apply flex flex-col gap-6 items-center lg:grid lg:grid-cols-3 lg:justify-center;
+        @apply flex flex-col gap-6 items-center md:flex md:flex-row md:justify-between md:items-center;
     }
     .footer__social{
         @apply flex gap-8 text-light md:order-first;
@@ -137,13 +201,13 @@
 @layer utilities{
     .btn{
         @apply inline-block py-[.5rem] px-[1rem] rounded-full border-transparent border-[1px] 
-        text-sm font-medium hover:scale-[1.1];
+        text-sm font-medium;
     }
     .btn.bg--lred{
-        @apply bg-lred text-light;
+        @apply bg-lred text-light hover:bg-light hover:text-lred;
     }
     .btn.bg--transparent{
-        @apply bg-transparent border-light text-light border-[1px];
+        @apply bg-transparent border-light text-light border-[1px]  hover:bg-light hover:text-lred;
     }
 }
 
